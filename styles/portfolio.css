@@ -169,3 +169,14 @@ header {
         font-size: 3.75rem;
     }
 }
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const imageFolder = 'images/';
     const images = [
         'img (1).JPG', 'img (2).JPG', 'img (3).JPG', 'img (4).JPG',
@@ -17,17 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function imageLoaded() {
         imagesLoaded++;
         if (imagesLoaded === images.length) {
-            // All images are loaded, hide the loading screen
             loadingScreen.style.display = 'none';
         }
     }
 
     images.forEach(image => {
         const imgElement = document.createElement('img');
-        imgElement.src = imageFolder + image; // Load the image directly
+        imgElement.src = imageFolder + image; 
         imgElement.alt = 'Gallery Image';
-        imgElement.onload = imageLoaded; // Call imageLoaded when the image loads
-        imgElement.onerror = imageLoaded; // Handle potential errors
+        imgElement.onload = imageLoaded; 
+        imgElement.onerror = imageLoaded; 
         galleryGrid.appendChild(imgElement);
     });
 
