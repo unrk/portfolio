@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding-top: 4rem;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #2d3748;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #000;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+header .logo-container span {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+header nav {
+    display: none;
+    margin-right: auto;
+}
+
+header nav a {
+    color: #cbd5e0;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+header .buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+}
+
+header .buttons .discord-button {
+    background-color: #00000000;
+    border: #fff solid 1px;
+    color: #fff;
+    margin-right: 2em;
+}
+
+header .buttons .pasta-button {
+    background-color: #fff;
+    border: #fff solid 1px;
+    color: #000;
+    margin-right: 0.5em;
+}
+
+header .buttons .discord-button:hover {
+    background-color: #ffffff;
+    border: #fff solid 1px;
+    color: #000000;
+    margin-right: 2em;
+}
+
+header .buttons .pasta-button:hover {
+    background-color: #000000;
+    border: #000000 solid 1px;
+    color: #ffffff;
+    margin-right: 0.5em;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax value as needed */
+    gap: 10px; /* Adjust gap as needed */
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lazy-load {
+    opacity: 0; /* Make images transparent initially */
+    transition: opacity 0.5s ease-in-out; /* Fade in when loaded */
+}
+
+.lazy-load:not([src=""]) {
+    opacity: 1; /* Make loaded images visible */
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Or any color you prefer */
+    z-index: 999; /* Ensure it's on top of most elements, but below the header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #000000; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #2d3748;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the header is always on top */
+    background-color: #000;
+}
+
+@media (min-width: 768px) {
+    header nav {
+        display: flex;
+    }
+
+    header .search-container input,
+    header .search-container button {
+        display: block;
+    }
+
+    main h1 {
+        font-size: 3.75rem;
+    }
+}
