@@ -38,6 +38,10 @@ header .logo-container span {
     color: #fff;
 }
 
+header .logo-container a {
+    text-decoration: none;
+}
+
 header nav {
     display: none;
     margin-right: auto;
