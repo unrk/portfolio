@@ -1,6 +1,3 @@
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-
 My portfolio built with : </br>
 [![Next][Next.js]][Next-url]
 
