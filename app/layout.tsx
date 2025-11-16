@@ -13,8 +13,30 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Felix portfolio",
-  description: "made in next.js",
+  title: "Felix Portfolio",
+  description: "Photographer, adventurer, designer & developer",
+  openGraph: {
+    title: "Felix Portfolio",
+    description: "Photographer, adventurer, designer & developer",
+    url: "https://memoir.lol",
+    siteName: "Felix Portfolio",
+    images: [
+      {
+        url: "/metadata.png",
+        width: 1200,
+        height: 630,
+        alt: "Felix Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Felix Portfolio",
+    description: "Photographer, adventurer, designer & developer",
+    images: ["/metadata.png"],
+  },
 };
 
 export default function RootLayout({
