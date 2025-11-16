@@ -46,6 +46,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+console.log(\`
+                            __________
+                ___________)%%%%%%%%%/
+               /%%%%%%%%%%/%{}%%%%%%/
+              /{}%%%%%%%%/%%/%%%%%%/
+             /%%\% _---_/ \/%%%%%%/
+            /%%%%\/    /()|%%%%%%/
+           /%%%%%|()  /+ /%%%%%%/
+          /%%%%%%%\ +/HH%%\%%%%/
+         /%%%%%%%/%HH/_/%%%\%%/
+Felix   /%%%%%%%/%%\/%%%%%%{}/
+       /%%%%%%{}%%%/%%%%%%%%/
+      /%%%%%%%%%%%/
+     /
+    /
+   /
+  /
+                                      
+  Portfolio - https://memoir.lol
+  Made with ❤️ by Felix
+\`);
+`,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
