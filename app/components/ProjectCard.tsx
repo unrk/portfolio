@@ -1,4 +1,3 @@
-import GlareHover from "@/components/GlareHover";
 
 interface ProjectCardProps {
   title: string;
@@ -14,18 +13,6 @@ export default function ProjectCard({
   onClick,
 }: ProjectCardProps) {
   return (
-    <GlareHover
-      width="100%"
-      height="100%"
-      background="transparent"
-      borderRadius="0.75rem"
-      borderColor="transparent"
-      glareColor="#ffffff"
-      glareOpacity={0.4}
-      glareSize={200}
-      transitionDuration={600}
-      className="cursor-pointer"
-    >
       <div
         onClick={onClick}
         className="group relative h-full overflow-hidden rounded-xl border border-white/8 bg-white/0 shadow-lg backdrop-blur-xl transition-colors duration-300 hover:border-white/25 hover:bg-white/20"
@@ -42,6 +29,5 @@ export default function ProjectCard({
           <p className="text-sm text-zinc-300">{description}</p>
         </div>
       </div>
-    </GlareHover>
   );
 }
