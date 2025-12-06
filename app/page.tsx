@@ -40,8 +40,7 @@ export default function Home() {
         {/* Hero Section / Landing Page */}
         <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
           <h1 className="mb-6 text-5xl font-bold tracking-tight text-zinc-50 sm:text-6xl md:text-7xl">
-            Welcome to my
-            <span className="block">Portfolio</span>
+            Welcome to my <br /><u>landing</u> <span style={{ color: 'oklch(0.85 0.15 85)' }}>Page</span>
           </h1>
           <p className="mb-12 max-w-2xl text-lg text-zinc-50/70 sm:text-xl">
             My name is Félix, I love photography, design, web development and cybersecurity.
