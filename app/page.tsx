@@ -3,9 +3,20 @@
 import Link from "next/link";
 import { useMusicPlayer } from "./context/MusicContext";
 import { Github, Instagram, Music2, Disc3 } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const { openPlayer } = useMusicPlayer();
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const words = ["Developer", "Designer", "Photographer", "Music Lover"];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % words.length);
+    }, 2000); // Change word every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [words.length]);
   const socials = [
     {
       name: "GitHub",
@@ -40,7 +51,15 @@ export default function Home() {
         {/* Hero Section / Landing Page */}
         <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
           <h1 className="mb-6 text-5xl font-bold tracking-tight text-zinc-50 sm:text-6xl md:text-7xl">
-            Welcome to my <br /><u>landing</u> <span style={{ color: 'oklch(0.85 0.15 85)' }}>Page</span>
+            Hey, my name is Felix <br />
+            and I&apos;m a{" "}
+            <span 
+              key={currentWordIndex}
+              className="inline-block animate-fadeInUp"
+              style={{ color: 'oklch(0.85 0.15 85)' }}
+            >
+              {words[currentWordIndex]}
+            </span>
           </h1>
           <p className="mb-12 max-w-2xl text-lg text-zinc-50/70 sm:text-xl">
             My name is Félix, I love photography, design, web development and cybersecurity.
