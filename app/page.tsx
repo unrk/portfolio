@@ -62,7 +62,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="mb-12 max-w-2xl text-lg text-zinc-50/70 sm:text-xl">
-            My name is Félix, I love photography, design, web development and cybersecurity.
+            I like designing things and photographing, I'm a melophile and a cat lover. I also study computer science, have fun.
           </p>
 
           {/* Social Links - Bento Grid */}
